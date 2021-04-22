@@ -1,7 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect } from "react";
+import axios from "axios";
 
 function App() {
+  const getRequest = async () => {
+    try {
+      const { data } = await axios.get("/api/test");
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getRequest();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
