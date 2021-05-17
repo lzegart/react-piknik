@@ -10,7 +10,7 @@ mongoose.connect(
   },
   (err) => {
     if (err) throw err;
-    console.log("connected to reactPiknik");
+    console.log("Connected to Piknik");
   }
 );
 
